@@ -42,20 +42,20 @@ const plugins = [
       upload_dir: "uploads",
     },
   },
-  // {
-  //   resolve: "@medusajs/admin",
-  //   /** @type {import('@medusajs/admin').PluginOptions} */
-  //   options: {
-  //     autoRebuild: true,
-  //     develop: {
-  //       open: process.env.OPEN_BROWSER !== "false",
-  //     },
-  //   },
-  // },
+  {
+    resolve: "@medusajs/admin",
+    /** @type {import('@medusajs/admin').PluginOptions} */
+    options: {
+      autoRebuild: false,
+      develop: {
+        open: process.env.OPEN_BROWSER !== "false",
+      },
+    },
+  },
 ];
 
 const modules = {
-  eventBus: {
+  /*eventBus: {
     resolve: "@medusajs/event-bus-redis",
     options: {
       redisUrl: REDIS_URL
@@ -66,7 +66,7 @@ const modules = {
     options: {
       redisUrl: REDIS_URL
     }
-  }
+  },*/
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
