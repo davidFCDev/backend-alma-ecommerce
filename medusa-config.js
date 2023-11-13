@@ -69,6 +69,8 @@ const modules = {
   },*/
 };
 
+/*** */
+
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
 const projectConfig = {
   jwtSecret: process.env.JWT_SECRET,
