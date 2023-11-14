@@ -52,6 +52,23 @@ const plugins = [
       },
     },
   },
+  {
+    resolve: `medusa-payment-stripe`,
+    options: {
+      api_key: process.env.STRIPE_API_KEY,
+      webhook_secret: process.env.STRIPE_WEBHOOK_SECRET,
+      automatic_payment_methods: true,
+      capture: true,
+    },
+  },
+  {
+    resolve: "medusa-plugin-sendgrid",
+    options: {
+      api_key: process.env.SENDGRID_API_KEY,
+      from: "hello@medusajs.com",
+      order_placed_template: "d-72510afcbdaa4549a96909bef5829c1a",
+    },
+  },
 ];
 
 const modules = {
